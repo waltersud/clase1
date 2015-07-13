@@ -2,11 +2,11 @@
 
 // src/Acme/HelloBundle/DataFixtures/ORM/LoadUserData.php
 
-namespace Acme\HelloBundle\DataFixtures\ORM;
+namespace Core\SecurityBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Acme\HelloBundle\Entity\User;
+use Core\SecurityBundle\Entity\Usuario;
 
 class LoadUserData implements FixtureInterface
 {
@@ -15,7 +15,7 @@ class LoadUserData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        $userAdmin = new User();
+        $userAdmin = new Usuario;
         $userAdmin->setUsername('admin');
         $userAdmin->setPassword('test');
 

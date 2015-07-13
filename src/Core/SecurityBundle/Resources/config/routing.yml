@@ -1,6 +1,11 @@
-_core_security_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: CoreSecurityBundle:Default:index }	
-core_security_homepage:
-    path:     /
-    defaults: { _controller: CoreSecurityBundle:Default:index }
+#core_security_homepage:
+#    path:     /
+#    defaults: { _controller: CoreSecurityBundle:Default:index }
+core_security_login:
+    pattern: /login
+    defaults: {_controller: CoreSecurityBundle:Default:index }
+core_security_check:
+    pattern: /login_check
+core_security_logout:
+    pattern: /login
+    

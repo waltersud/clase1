@@ -7,7 +7,20 @@ security:
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-            security: false
+            security:false
+		demo_login:
+           pattern: ^/login$
+           security: false	
+		demo_secured_area:
+		    pattern: ^/
+            form_login:
+               check_path: core_security_check
+               login_path: core_security_login
+               username_parameter: frmLogin[_username]
+               password_parameter: frmLogin[_password]
+            logout:
+               path:   core_security_logout
+               target: core_security_login	
 
-        main:
-            anonymous: ~
+    #    main:
+    #        anonymous: ~
